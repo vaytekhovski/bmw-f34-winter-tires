@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Зимние шины 225/50 R18 — BMW 328i GT (F34) · бюджет 3000 BYN</title>
+<title>Зимние шины без шипов 225/50 R18 — BMW 328i xDrive GT (F34) · бюджет 3000 BYN</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#fff; --ink:#141a22; --muted:#5d6b7c; --line:#e2e6ec;
     --accent:#0b5fff; --good:#0f7a4a; --warn:#b26a00; --bad:#b3261e;
-    --stud:#1d4ed8; --fric:#0f766e;
+    --nordic:#0f766e; --euro:#7c3aed; --awd:#0b5fff;
   }
   *{box-sizing:border-box}
   body{
@@ -29,21 +29,22 @@
   .kpi b{display:block;font-size:20px;letter-spacing:-.3px}
   .kpi span{color:var(--muted);font-size:13px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .card + .card{margin-top:14px}
   .note{border-left:4px solid var(--accent);background:#eef3ff;border-radius:0 12px 12px 0;padding:14px 18px;margin:16px 0}
   .note.warn{border-left-color:var(--warn);background:#fff6e6}
+  .note.bad{border-left-color:var(--bad);background:#fdeceb}
   ul,ol{margin:0 0 12px;padding-left:22px}
   li{margin:5px 0}
   code{background:#eef1f5;border-radius:5px;padding:1px 6px;font-size:14px}
   .badge{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px;letter-spacing:.2px}
-  .b-stud{background:#e6edff;color:var(--stud)}
-  .b-fric{background:#e3f5f1;color:var(--fric)}
-  .b-xl{background:#f0eaff;color:#5b21b6}
-  .b-fits{background:#e4f6ec;color:var(--good)}
+  .b-nordic{background:#e3f5f1;color:var(--nordic)}
+  .b-euro{background:#f1eaff;color:var(--euro)}
+  .b-xl{background:#eef2f7;color:#334155}
+  .b-awd{background:#e6edff;color:var(--awd)}
   .b-over{background:#fdeceb;color:var(--bad)}
 
-  /* option cards */
   .opts{display:grid;gap:16px}
-  .opt{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;position:relative}
+  .opt{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
   .opt.top{border-color:#bfd2ff;box-shadow:0 2px 18px rgba(11,95,255,.10)}
   .opt-head{display:flex;gap:14px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;margin-bottom:10px}
   .rank{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:#101827;color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px}
@@ -65,11 +66,10 @@
   .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
   .links a{
     font-size:13.5px;font-weight:600;background:#f2f5fa;border:1px solid var(--line);
-    border-radius:8px;padding:6px 11px;border-bottom:1px solid var(--line)
+    border-radius:8px;padding:6px 11px
   }
   .links a:hover{background:#eaf0fb;border-color:#bfd2ff}
 
-  /* table */
   .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
   table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:880px}
   th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
@@ -80,9 +80,8 @@
   .ok{color:var(--good);font-weight:600}
   .no{color:var(--bad);font-weight:600}
 
-  /* bars */
   .bars{margin-top:6px}
-  .bar-row{display:grid;grid-template-columns:220px 1fr 92px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line)}
+  .bar-row{display:grid;grid-template-columns:230px 1fr 92px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line)}
   .bar-row:last-child{border-bottom:none}
   .bar-label{font-size:14px;font-weight:600}
   .bar-track{background:#eef1f5;border-radius:6px;height:16px;position:relative;overflow:hidden}
@@ -91,11 +90,12 @@
   .bar-val{font-size:13.5px;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
   .cap{font-size:13px;color:var(--muted);margin-top:8px}
 
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
   .src{font-size:13.5px;color:var(--muted)}
   .src li{margin:4px 0}
   @media (max-width:640px){
-    .pm{grid-template-columns:1fr}
+    .pm,.grid2{grid-template-columns:1fr}
     .bar-row{grid-template-columns:1fr;gap:4px}
     .bar-val{text-align:left}
     body{padding:20px 12px 56px}
@@ -112,43 +112,66 @@
 <div class="wrap">
 
 <header>
-  <h1>Зимние шины 225/50 R18 для BMW 328i GT (F34)</h1>
-  <p class="sub">Комплект 4 шт · бюджет до 3 000 BYN · онлайн-предложения интернет-магазинов Беларуси · данные собраны 24.10.2026</p>
+  <h1>Зимние шины без шипов 225/50 R18 — BMW 328i xDrive GT (F34)</h1>
+  <p class="sub">Полный привод · только фрикционные (шипы исключены) · комплект 4 шт. до 3 000 BYN · цены собраны 24.10.2026</p>
   <div class="kpis">
-    <div class="kpi"><b>225/50 R18</b><span>типоразмер (штатный для F34)</span></div>
-    <div class="kpi"><b>99 XL</b><span>нагрузка 775 кг — как требует BMW</span></div>
-    <div class="kpi"><b>≤ 750 BYN</b><span>лимит на 1 шину из бюджета</span></div>
-    <div class="kpi"><b>6 вариантов</b><span>влезают в 3 000 BYN за комплект</span></div>
+    <div class="kpi"><b>225/50 R18</b><span>штатный размер F34</span></div>
+    <div class="kpi"><b>99 XL</b><span>775 кг — обязательный минимум</span></div>
+    <div class="kpi"><b>xDrive</b><span>4 одинаковые шины, один износ</span></div>
+    <div class="kpi"><b>6 вариантов</b><span>без шипов, влезают в 3 000 BYN</span></div>
   </div>
 </header>
 
-<h2>1. Что именно нужно вашему автомобилю</h2>
+<h2>1. Что нужно именно вашему автомобилю</h2>
 <div class="card">
-  <p><strong>Штатная зимняя размерность BMW для F34</strong> — <code>225/50 R 18 99V M+S extra load</code>. В официальном перечне зимних шин BMW для 3-й серии (F34) именно этот размер указан с рекомендованным заводским вариантом Continental WinterContact TS830P SSR (run-flat). Это значит:</p>
+  <p><strong>Штатная зимняя размерность BMW для F34</strong> — <code>225/50 R 18 99V M+S extra load</code>. Для полноприводной версии требования те же плюс один жёсткий пункт про одинаковые шины (ниже).</p>
   <ul>
-    <li><strong>Индекс нагрузки 99 (775 кг)</strong> — обязательный минимум. Шины с индексом 95 (690 кг) формально держат снаряжённую массу 328i, но <em>не соответствуют спецификации BMW</em>: у 225/50 R18 штатно идёт усиленный корпус XL. Такой размер у Hankook/Gislaved/Kumho/Nexen как раз в XL.</li>
-    <li><strong>Индекс скорости</strong>: BMW просит V (240 км/ч). Практично: для Беларуси за глаза хватает <strong>T (190)</strong> или <strong>H (210)</strong> — ограничения 90/110 км/ч. V нужен только если реально ездите по автобанам.</li>
-    <li><strong>Маркировка 3PMSF + M+S</strong> — по ПДД РБ только такая пара знаков делает шину «зимней».</li>
-    <li><strong>Run-flat не обязателен</strong>: штатные ROF-шины в этом размере стоят от 1 200 BYN/шт и в бюджет не входят. Обычные шины + докатка/ремкомплект — нормальная практика.</li>
+    <li><strong>Индекс нагрузки 99 (775 кг)</strong> — обязательный минимум. У 328i xDrive GT снаряжённая масса ≈ 1 720 кг, полная ≈ 2 190 кг. Шины 99 XL — это четыре колеса по 775 кг, запас есть. Индекс 95 (690 кг) формально держит машину, но <em>не соответствует спецификации BMW</em> и на полном приводе работает с перегрузом при полной загрузке.</li>
+    <li><strong>Индекс скорости</strong>: BMW просит V (240). Для РБ с лимитами 90/110 км/ч практично хватает T (190) или H (210); V — если реально ездите по автобанам.</li>
+    <li><strong>3PMSF + M+S</strong> — по ПДД РБ только эта пара знаков делает шину зимней. Все модели в подборке её имеют.</li>
+    <li><strong>Только без шипов</strong> — как вы и просили. Причины, по которым это ещё и разумно: шум на асфальте, запрет в июне–августе, потеря 10–20 % на сухом и мокром. В Минске и на трассах 80–90 % пробега зимой — асфальт и слякоть, где липучка сильнее.</li>
   </ul>
 
   <div class="note">
-    <strong>Что говорит закон (ПДД РБ, п. 207-1 и глава 5):</strong> с 1 декабря по 1 марта автомобили до 3,5 т должны быть на зимних шинах <em>на всех четырёх колёсах</em>, одинаковый рисунок протектора на оси. Остаточная глубина — не менее 4 мм. Ошипованные шины разрешены, но: <em>шипы ставятся на все оси</em>, и <em>запрещены в июне–августе</em>. Штраф за летние шины зимой — до 1 базовой величины (42 BYN), повторно — 2–5 БВ.
+    <strong>Полный привод (xDrive) — что это меняет на практике</strong>
+    <ul style="margin-bottom:0">
+      <li><strong>Все четыре шины — одной модели, одного размера, с одинаковым износом.</strong> Раздатка и муфта xDrive рассчитаны на одинаковое передаточное отношение колёс. При разнице диаметра всего <strong>2 мм</strong> (≈6 мм по окружности; окружность 225/50 R18 — 2 143 мм) муфта начинает постоянно подбуксовывать: нагрев, износ фрикционов, ошибки по трансмиссии. Замена пары шин вместо четырёх на xDrive — плохая идея.</li>
+      <li><strong>Ротация колёс каждые 8–10 тыс. км</strong> — чтобы износ шёл ровно, а не «передние стёрлись, задние остались».</li>
+      <li><strong>Полный привод помогает трогаться и держит траекторию, но не тормозит.</strong> Тормозной путь на льду определяется резиной, а не приводом — именно поэтому экономить на сцеплении здесь опаснее, чем на моноприводе: масса выше, а ожидания от поведения машины больше.</li>
+      <li><strong>Контроль давления обязателен:</strong> xDrive чувствителен к разнице давления по колёсам (TPMS покажет, но проверяйте раз в 2–3 недели).</li>
+    </ul>
+  </div>
+
+  <div class="note warn">
+    <strong>Закон (ПДД РБ, п. 207-1 и глава 5):</strong> с 1 декабря по 1 марта — зимние шины на всех четырёх колёсах, одинаковый рисунок протектора на оси, остаточная глубина не менее 4 мм. Штраф за летние шины зимой — до 1 базовой величины (42 BYN), повторно — 2–5 БВ.
   </div>
 </div>
 
-<h2>2. Шесть вариантов, которые влезают в 3 000 BYN</h2>
-<p class="sub" style="margin-bottom:16px">Отсортировано по цене комплекта. Цена за 1 шт. указана по самому дешёвому из найденных онлайн-предложений; рядом — полная стоимость комплекта из 4 шин без шиномонтажа.</p>
+<h2>2. Два типа «липучки» — чтобы выбрать осознанно</h2>
+<div class="grid2">
+  <div class="card">
+    <h3><span class="badge b-nordic">скандинавский тип</span></h3>
+    <p style="margin-bottom:8px">Мягкая резина, много ламелей, направленный протектор. Максимум на укатанном снегу и льду, хуже на сухом асфальте при +5…+10 °C (чуть «плывёт», быстрее изнашивается).</p>
+    <p style="margin-bottom:0"><strong>Кому:</strong> дворы, загородные дороги, поездки зимой по всей РБ. В подборке — Gislaved ArcticControl, Yokohama iceGUARD iG60.</p>
+  </div>
+  <div class="card">
+    <h3><span class="badge b-euro">европейский тип</span></h3>
+    <p style="margin-bottom:8px">Жёстче, асимметричный протектор, отличный дренаж. Сильна на мокром асфальте и слякоти, устойчиво на скорости; на чистом льду слабее «скандинавки».</p>
+    <p style="margin-bottom:0"><strong>Кому:</strong> Минск, МКАД, трасса, редкие выезды на лёд. В подборке — Hankook W340, Kumho WS71, Yokohama V906.</p>
+  </div>
+</div>
+
+<h2>3. Варианты без шипов, которые влезают в 3 000 BYN</h2>
+<p class="sub" style="margin-bottom:16px">Отсортировано по цене комплекта. Цена за 1 шт. — по самому дешёвому найденному предложению в наличии; рядом стоимость комплекта из 4 шин без шиномонтажа.</p>
 
 <div class="opts">
 
-  <!-- 1 -->
   <article class="opt top">
     <div class="opt-head">
       <div class="rank">1</div>
       <div class="opt-main">
-        <div class="model">Hankook Winter i*cept evo4 W340 <span class="badge b-fric">липучка</span> <span class="badge b-xl">XL</span>
-          <small>225/50 R18 99V · фрикционная UHP · модель 2026 года, замена W330</small>
+        <div class="model">Hankook Winter i*cept evo4 W340 <span class="badge b-euro">европейский</span> <span class="badge b-xl">99V XL</span>
+          <small>225/50 R18 99V · фрикционная UHP, модель 2026 года (замена W330)</small>
         </div>
       </div>
       <div class="price">
@@ -157,47 +180,44 @@
       </div>
     </div>
     <div class="specs">
-      <div class="spec"><i>Тип</i><b>Фрикционная (без шипов)</b></div>
       <div class="spec"><i>Нагрузка / скорость</i><b>99 (775 кг) / V (240)</b></div>
       <div class="spec"><i>Евроэтикетка</i><b>C / B / 72 dB</b></div>
       <div class="spec"><i>Маркировка</i><b>M+S, 3PMSF</b></div>
-      <div class="spec"><i>Протектор</i><b>Симметричный направленный</b></div>
+      <div class="spec"><i>Протектор</i><b>Направленный</b></div>
       <div class="spec"><i>Остаток бюджета</i><b class="ok">1 672 BYN</b></div>
     </div>
     <div class="pm">
       <div>
         <h4>Плюсы</h4>
         <ul>
-          <li>Лучшее соотношение цена/качество в подборке: комплект дешевле бюджета более чем вдвое</li>
-          <li>Свежее поколение (2026) с улучшенной управляемостью на снегу и мокром асфальте — ровно то, что нужно тяжёлому заднеприводному седану</li>
-          <li>Полное соответствие спецификации BMW: 99 XL + V</li>
-          <li>Тихие (72 dB, класс B) — для трассовых 100–120 км/ч важно</li>
-          <li>Есть евроэтикетка: торможение на мокром — B, это лучший показатель в подборке</li>
+          <li>Лучшая цена в подборке: комплект вдвое дешевле лимита</li>
+          <li>Свежее поколение 2026 года: точная управляемость и стабильность на скорости — то, что нужно тяжёлому xDrive-седану</li>
+          <li>Полное соответствие спецификации BMW: 99 XL + V, единственная V-модель в бюджете среди «европейцев»</li>
+          <li>Торможение на мокром — класс B (лучший показатель в подборке), шум 72 dB</li>
         </ul>
       </div>
       <div>
         <h4>Минусы</h4>
         <ul>
-          <li>Не для постоянного льда: на обледенелом подъёме проигрывает шипам</li>
-          <li>На складах часто по 1–4 шт. — комплект лучше бронировать сразу</li>
-          <li>Сезон новинки: долгосрочной статистики по износу ещё нет</li>
+          <li>На чистом льду и в глубоком снегу уступает «скандинавкам»</li>
+          <li>На складах часто по 1–4 шт. — комплект надо бронировать сразу</li>
+          <li>Новинка: статистики по износу за несколько сезонов ещё нет</li>
         </ul>
       </div>
     </div>
     <div class="links">
       <a href="https://www.colesa.by/content/winter-icept-evo-4-w340/225-50-r18" target="_blank" rel="noopener">colesa.by — 332 BYN</a>
       <a href="https://autoset.by/tires/hankook/winter_icept_evo_4_w340/225_50_18_99_V_195810/" target="_blank" rel="noopener">autoset.by — 384,34 BYN</a>
-      <a href="https://catalog.onliner.by/tires/hankook/w34022550r1899v" target="_blank" rel="noopener">каталог onliner.by (характеристики)</a>
+      <a href="https://catalog.onliner.by/tires/hankook/w34022550r1899v" target="_blank" rel="noopener">каталог onliner.by</a>
     </div>
   </article>
 
-  <!-- 2 -->
   <article class="opt">
     <div class="opt-head">
       <div class="rank">2</div>
       <div class="opt-main">
-        <div class="model">Gislaved ArcticControl <span class="badge b-fric">липучка</span> <span class="badge b-xl">XL</span>
-          <small>225/50 R18 99T · скандинавская фрикционная · концерн Continental</small>
+        <div class="model">Gislaved ArcticControl <span class="badge b-nordic">скандинавский</span> <span class="badge b-xl">99T XL</span>
+          <small>225/50 R18 99T · настоящая «скандинавка» под контролем Continental</small>
         </div>
       </div>
       <div class="price">
@@ -206,29 +226,28 @@
       </div>
     </div>
     <div class="specs">
-      <div class="spec"><i>Тип</i><b>Фрикционная (без шипов)</b></div>
       <div class="spec"><i>Нагрузка / скорость</i><b>99 (775 кг) / T (190)</b></div>
       <div class="spec"><i>Евроэтикетка</i><b>не маркируется</b></div>
       <div class="spec"><i>Маркировка</i><b>M+S, 3PMSF</b></div>
-      <div class="spec"><i>Протектор</i><b>Симметричный направленный</b></div>
+      <div class="spec"><i>Протектор</i><b>Направленный</b></div>
       <div class="spec"><i>Остаток бюджета</i><b class="ok">1 175 BYN</b></div>
     </div>
     <div class="pm">
       <div>
         <h4>Плюсы</h4>
         <ul>
-          <li>Настоящая «скандинавская» липучка: мягкая смесь, сильная сторона — укатанный снег и лёд</li>
-          <li>Технологии и контроль Continental, но цена среднего класса</li>
-          <li>Много на складах (в autoset.by — более 20 шт. в каждом магазине Минска), доставка «сегодня»</li>
-          <li>XL-корпус под массу 328i</li>
+          <li>Мягкая смесь и ламели под укатанный снег и лёд — то, чего не хватает «европейцам»</li>
+          <li>Технологии Continental по цене среднего класса</li>
+          <li>Много на складах (в autoset.by — свыше 20 шт. по каждому магазину Минска), забрать можно сегодня</li>
+          <li>XL-корпус под массу 328i xDrive</li>
         </ul>
       </div>
       <div>
         <h4>Минусы</h4>
         <ul>
-          <li>Индекс скорости T (190 км/ч) — ниже BMW-спеки V; для РБ не критично</li>
-          <li>Евроэтикетки нет (производство РФ для рынков ЕАЭС) — сравнивать «в цифрах» не с чем</li>
-          <li>Разброс цен между магазинами большой: 456 → 735 → 793 BYN за одну и ту же шину</li>
+          <li>Индекс скорости T (190) — ниже BMW-спеки V; для РБ не критично</li>
+          <li>Евроэтикетки нет — сравнивать «в цифрах» не с чем</li>
+          <li>Разброс цен большой: 456 → 511 → 793 BYN за одну и ту же шину</li>
         </ul>
       </div>
     </div>
@@ -239,107 +258,100 @@
     </div>
   </article>
 
-  <!-- 3 -->
   <article class="opt">
     <div class="opt-head">
       <div class="rank">3</div>
       <div class="opt-main">
-        <div class="model">Kumho WinterCraft Ice Wi32 <span class="badge b-stud">шипы</span> <span class="badge b-xl">XL</span>
-          <small>225/50 R18 99T · шипованная (в РБ часто продаётся под ошиповку) </small>
+        <div class="model">Kumho WinterCraft WS71 <span class="badge b-euro">универсальный</span> <span class="badge b-xl">99V XL</span>
+          <small>225/50 R18 99V · фрикционная, асимметричный протектор, усиленный корпус</small>
         </div>
       </div>
       <div class="price">
-        <b>459 BYN</b><span>за 1 шт. (proshina.by / loyal.by)</span>
-        <div class="set">1 836 BYN за 4 шт.</div>
+        <b>629 BYN</b><span>за 1 шт. (proshina.by)</span>
+        <div class="set">2 516 BYN за 4 шт.</div>
       </div>
     </div>
     <div class="specs">
-      <div class="spec"><i>Тип</i><b>Шипованная / под ошиповку</b></div>
-      <div class="spec"><i>Нагрузка / скорость</i><b>99 (775 кг) / T (190)</b></div>
-      <div class="spec"><i>Шипов</i><b>до 200 (зависит от размера)</b></div>
+      <div class="spec"><i>Нагрузка / скорость</i><b>99 (775 кг) / V (240)</b></div>
+      <div class="spec"><i>Евроэтикетка</i><b>нет данных</b></div>
       <div class="spec"><i>Маркировка</i><b>M+S, 3PMSF</b></div>
-      <div class="spec"><i>Протектор</i><b>Направленный</b></div>
-      <div class="spec"><i>Остаток бюджета</i><b class="ok">1 164 BYN</b></div>
+      <div class="spec"><i>Протектор</i><b>Асимметричный</b></div>
+      <div class="spec"><i>Остаток бюджета</i><b class="ok">484 BYN</b></div>
     </div>
     <div class="pm">
       <div>
         <h4>Плюсы</h4>
         <ul>
-          <li>Самые дешёвые шипы в подборке на комплект: 1 836 BYN</li>
-          <li>Надёжно гребёт по снегу и держит лёд — отзывы покупателей именно про это</li>
-          <li>Корейское качество по цене китайских брендов</li>
-          <li>XL, 99 индекс — под вес F34</li>
+          <li>V-индекс и асимметричный рисунок: ровно, устойчиво на скорости, для трассы хорошо</li>
+          <li>Крепкая боковина и усиленный корпус — под 2 200 кг полной массы</li>
+          <li>Золотая середина по цене между «бюджетом» и премиумом</li>
         </ul>
       </div>
       <div>
         <h4>Минусы</h4>
         <ul>
-          <li><strong>Важно:</strong> на белорусском рынке часть поставок идёт <em>без установленных шипов</em> — только подготовленные отверстия. Уточняйте при заказе, иначе доплата за ошиповку</li>
-          <li>Шум на асфальте — обычная плата за шипы</li>
-          <li>Модель не новая, по льду уступает Pirelli Ice Zero 2</li>
+          <li>Наличие нестабильное: в rft.by «нет в наличии», в proshina — под заказ. Уточняйте перед оплатой</li>
+          <li>Рисунок «универсальный», а не чисто скандинавский: на льду средний результат</li>
+          <li>Информации по евроэтикетке для этого размера в открытых источниках нет</li>
         </ul>
       </div>
     </div>
     <div class="links">
-      <a href="https://proshina.by/catalog/tires/kumho-wintercraft-ice-wi32-225-50r18-99t.html" target="_blank" rel="noopener">proshina.by — 459 BYN</a>
-      <a href="https://loyal.by/catalog/shiny/kumho/kumho-wintercraft-wi32-225-50-r18-99t-xl/" target="_blank" rel="noopener">loyal.by — 459 BYN</a>
+      <a href="https://proshina.by/catalog/tires/kumho-wintercraft-ws71-225-50r18-99v.html" target="_blank" rel="noopener">proshina.by — 629 BYN</a>
+      <a href="https://rft.by/catalog/tires/kumho/wintercraft_ws71_3322/80948/" target="_blank" rel="noopener">rft.by — нет в наличии</a>
+      <a href="https://shop.by/shiny/kumho_wintercraft_ws71_225_50r18_99v/" target="_blank" rel="noopener">shop.by — сравнение</a>
     </div>
   </article>
 
-  <!-- 4 -->
   <article class="opt">
     <div class="opt-head">
       <div class="rank">4</div>
       <div class="opt-main">
-        <div class="model">Nexen WinGuard WinSpike 3 <span class="badge b-stud">шипы</span> <span class="badge b-xl">XL</span>
-          <small>225/50 R18 99T · шипованная, скандинавский тип, модель 2020 г.</small>
+        <div class="model">Yokohama BluEarth Winter V906 <span class="badge b-euro">европейский</span> <span class="badge b-xl">99V</span>
+          <small>225/50 R18 99V · фрикционная повышенной комфортности, асимметричный протектор</small>
         </div>
       </div>
       <div class="price">
-        <b>528 BYN</b><span>за 1 шт. (cybermarket.by)</span>
-        <div class="set">2 112 BYN за 4 шт.</div>
+        <b>677 BYN</b><span>за 1 шт. (r13.by, Гродно)</span>
+        <div class="set">2 708 BYN за 4 шт.</div>
       </div>
     </div>
     <div class="specs">
-      <div class="spec"><i>Тип</i><b>Шипованная</b></div>
-      <div class="spec"><i>Нагрузка / скорость</i><b>99 (775 кг) / T (190)</b></div>
+      <div class="spec"><i>Нагрузка / скорость</i><b>99 (775 кг) / V (240)</b></div>
+      <div class="spec"><i>Евроэтикетка</i><b>нет данных по размеру</b></div>
       <div class="spec"><i>Маркировка</i><b>M+S, 3PMSF</b></div>
-      <div class="spec"><i>Протектор</i><b>Симметричный направленный</b></div>
-      <div class="spec"><i>Гарантия</i><b>12–24 мес (по магазинам)</b></div>
-      <div class="spec"><i>Остаток бюджета</i><b class="ok">888 BYN</b></div>
+      <div class="spec"><i>Протектор</i><b>Асимметричный</b></div>
+      <div class="spec"><i>Остаток бюджета</i><b class="ok">292 BYN</b></div>
     </div>
     <div class="pm">
       <div>
         <h4>Плюсы</h4>
         <ul>
-          <li>Середина между «дешёвыми шипами» и премиумом: за 2 112 BYN получаете нормальный корейский шип</li>
-          <li>Уверенно на льду и в глубоком снегу, крепкая боковина</li>
-          <li>В наличии, доставка по Минску 1–2 дня</li>
+          <li>Комфортная и тихая, с хорошим дренажом — оптимальна для мокрого минского асфальта</li>
+          <li>V-индекс, полный набор зимних маркировок</li>
+          <li>Доставка по РБ 1–2 дня</li>
         </ul>
       </div>
       <div>
         <h4>Минусы</h4>
         <ul>
-          <li>Разброс цен огромный: 528 → 578 → 633 BYN за одну шину — проверяйте перед оплатой</li>
-          <li>Модель 2020 года, по шуму и расходу топлива хуже новых</li>
-          <li>Только T-индекс</li>
+          <li>Продаётся у продавца в Гродно, в Минске в наличии не нашлась — доставка обязательна</li>
+          <li>На льду уступает «скандинавкам», это типичный «европеец»</li>
+          <li>Цена уже близко к «половине льда и снега»: за те же деньги iG60 будет сильнее зимой</li>
         </ul>
       </div>
     </div>
     <div class="links">
-      <a href="https://www.cybermarket.by/tires/nexen/newi22550r1899ts" target="_blank" rel="noopener">cybermarket.by — 528 BYN</a>
-      <a href="https://prodetal.by/avtomobilnie-shiny/nexen/nexen-winguard-winspike-3-225-50r18-99t-shipy/" target="_blank" rel="noopener">prodetal.by — 578,02 BYN</a>
-      <a href="https://shop.by/shiny/nexen_winguard_winspike_3_225_50r18_99t/" target="_blank" rel="noopener">shop.by — сравнение предложений</a>
+      <a href="https://r13.by/shop/shini/7BFAC3EB-CD10-3FA0-BE31-183C103A9FC9/shiny-yokohama-bluearth-winter-v906-22550-r18-99v-tl/" target="_blank" rel="noopener">r13.by — 677 BYN</a>
     </div>
   </article>
 
-  <!-- 5 -->
   <article class="opt">
     <div class="opt-head">
       <div class="rank">5</div>
       <div class="opt-main">
-        <div class="model">Yokohama iceGUARD iG60 <span class="badge b-fric">липучка</span> <span class="badge b-xl">XL</span>
-          <small>225/50 R18 99Q · фрикционная «скандинавка», топ линейки Yokohama</small>
+        <div class="model">Yokohama iceGUARD iG60 <span class="badge b-nordic">скандинавский</span> <span class="badge b-xl">99Q XL</span>
+          <small>225/50 R18 99Q · топ линейки фрикционных Yokohama, асимметричный протектор</small>
         </div>
       </div>
       <div class="price">
@@ -348,28 +360,27 @@
       </div>
     </div>
     <div class="specs">
-      <div class="spec"><i>Тип</i><b>Фрикционная (без шипов)</b></div>
       <div class="spec"><i>Нагрузка / скорость</i><b>99 (775 кг) / Q (160)</b></div>
       <div class="spec"><i>Евроэтикетка</i><b>C–D / E / 71–73 dB</b></div>
       <div class="spec"><i>Маркировка</i><b>M+S, 3PMSF</b></div>
       <div class="spec"><i>Протектор</i><b>Асимметричный</b></div>
-      <div class="spec"><i>Остаток бюджета</i><b class="ok">140 BYN</b></div>
+      <div class="spec"><i>Остаток бюджета</i><b class="warn">140 BYN</b></div>
     </div>
     <div class="pm">
       <div>
         <h4>Плюсы</h4>
         <ul>
-          <li>Один из лучших фрикционных составов именно на льду (4-слойные 3D-ламели + «впитывающая» резина)</li>
-          <li>Держит характеристики по мере износа — сильная сторона серии</li>
-          <li>В наличии на складе в Минске</li>
+          <li>Один из лучших составов именно на льду: 4-слойные 3D-ламели, «впитывающая» микротекстура</li>
+          <li>Держит свойства по мере износа — сильная сторона серии iG</li>
+          <li>Самый тихий вариант в подборке (71–73 dB)</li>
         </ul>
       </div>
       <div>
         <h4>Минусы</h4>
         <ul>
-          <li>Слабое торможение на мокром асфальте по евроэтикетке (E) — а в Беларуси зимой чаще именно мокрый асфальт, чем лёд</li>
-          <li>Индекс скорости Q (160 км/ч) — запас небольшой</li>
-          <li>Съедает почти весь бюджет</li>
+          <li>Торможение на мокром по евроэтикетке — E: главный минус для минской зимы</li>
+          <li>Индекс скорости Q (160 км/ч) — минимальный запас</li>
+          <li>Съедает бюджет почти целиком: 140 BYN на шиномонтаж и запас</li>
         </ul>
       </div>
     </div>
@@ -379,114 +390,119 @@
     </div>
   </article>
 
-  <!-- 6 -->
   <article class="opt">
     <div class="opt-head">
       <div class="rank">6</div>
       <div class="opt-main">
-        <div class="model">Pirelli Ice Zero 2 <span class="badge b-stud">шипы</span>
-          <small>225/50 R18 99H · премиум-шиповка, шип с двойным сердечником</small>
+        <div class="model">iLink Snowgripper I <span class="badge b-euro">бюджет</span> <span class="badge b-xl">99H XL</span>
+          <small>225/50 R18 99H · фрикционная, продаётся через каталог Onlíner с доставкой</small>
         </div>
       </div>
       <div class="price">
-        <b>738 BYN</b><span>за 1 шт. (rft.by)</span>
-        <div class="set">2 952 BYN за 4 шт.</div>
+        <b>482 BYN</b><span>за 1 шт. (каталог onliner.by)</span>
+        <div class="set">1 928 BYN за 4 шт.</div>
       </div>
     </div>
     <div class="specs">
-      <div class="spec"><i>Тип</i><b>Шипованная</b></div>
       <div class="spec"><i>Нагрузка / скорость</i><b>99 (775 кг) / H (210)</b></div>
-      <div class="spec"><i>Класс</i><b>Premium</b></div>
+      <div class="spec"><i>Евроэтикетка</i><b>нет данных</b></div>
       <div class="spec"><i>Маркировка</i><b>M+S, 3PMSF</b></div>
-      <div class="spec"><i>Шум</i><b>−20 % к предшественнику</b></div>
-      <div class="spec"><i>Остаток бюджета</i><b class="warn">48 BYN</b></div>
+      <div class="spec"><i>Рейтинг</i><b>4,2 (105 оценок)</b></div>
+      <div class="spec"><i>Остаток бюджета</i><b class="ok">1 072 BYN</b></div>
     </div>
     <div class="pm">
       <div>
         <h4>Плюсы</h4>
         <ul>
-          <li>Максимум сцепления на льду и в снегу среди всего, что влезает в бюджет</li>
-          <li>Лучший индекс скорости среди шипов в подборке — H (210)</li>
-          <li>Точные реакции на руль: для заднеприводного 328i это заметно</li>
-          <li>В наличии на складе в Минске, 1–2 дня</li>
+          <li>Дешёвая альтернатива с нормальными индексами (99 XL, H) и доставкой со склада Onlíner</li>
+          <li>Массовые продажи и живые отзывы — можно почитать реальный опыт</li>
         </ul>
       </div>
       <div>
         <h4>Минусы</h4>
         <ul>
-          <li>Занимает 98 % бюджета: на шиномонтаж и «мелочи» остаётся 48 BYN</li>
-          <li>Шипы в городе — шум и спорная нужность, если 90 % пробега по асфальту</li>
-          <li>Дороже в разы при сопоставимой безопасности в мягкую зиму</li>
+          <li>Бюджетный бренд: нет евроэтикетки, нет независимых тестов, долгосрочная стойкость смеси неизвестна</li>
+          <li>Для 1 720 кг полноприводного BMW — лотерея на льду и при экстренном торможении</li>
+          <li>Берите только если бюджет режется жёстко: разница с Hankook — всего 600 BYN на комплект</li>
         </ul>
       </div>
     </div>
     <div class="links">
-      <a href="https://rft.by/catalog/tires/pirelli/ice-zero-2/?display=table&order=asc&sort=SHOWS" target="_blank" rel="noopener">rft.by — 738,08 BYN</a>
-      <a href="https://proshina.by/catalog/tires/pirelli/ice-zero-2/" target="_blank" rel="noopener">proshina.by — 778 BYN</a>
+      <a href="https://catalog.onliner.by/tires?siny-22550-r18=" target="_blank" rel="noopener">каталог onliner.by — 481,96 BYN</a>
     </div>
   </article>
 
 </div>
 
-<h2>3. Сравнительная таблица</h2>
+<h2>4. Сравнительная таблица (только без шипов)</h2>
 <div class="tablewrap">
   <table>
     <thead>
       <tr>
         <th>Модель</th>
         <th>Тип</th>
-        <th>Размер / индексы</th>
-        <th>Евроэтикетка<br>(качение / мокро / шум)</th>
+        <th>Индексы</th>
+        <th>Евроэтикетка<br>качение / мокро / шум</th>
         <th>Цена 1 шт.</th>
         <th>Комплект 4 шт.</th>
         <th>В бюджет</th>
-        <th>Магазин</th>
+        <th>Наличие</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><strong>Hankook Winter i*cept evo4 W340</strong></td>
-        <td>липучка</td>
+        <td>европейский</td>
         <td class="num">99V XL</td>
         <td class="num">C / B / 72 dB</td>
         <td class="num">332,00</td>
         <td class="num"><strong>1 328</strong></td>
         <td class="ok">да (−1 672)</td>
-        <td>colesa.by</td>
+        <td>colesa.by, autoset.by</td>
       </tr>
       <tr>
         <td><strong>Gislaved ArcticControl</strong></td>
-        <td>липучка</td>
+        <td>скандинавский</td>
         <td class="num">99T XL</td>
-        <td class="num">не маркируется</td>
+        <td class="num">нет данных</td>
         <td class="num">456,20</td>
         <td class="num"><strong>1 825</strong></td>
         <td class="ok">да (−1 175)</td>
-        <td>tyreg.by</td>
+        <td>tyreg.by, rft.by, autoset.by</td>
       </tr>
       <tr>
-        <td><strong>Kumho WinterCraft Ice Wi32</strong></td>
-        <td>шипы</td>
-        <td class="num">99T XL</td>
+        <td><strong>iLink Snowgripper I</strong></td>
+        <td>бюджет</td>
+        <td class="num">99H XL</td>
         <td class="num">нет данных</td>
-        <td class="num">459,00</td>
-        <td class="num"><strong>1 836</strong></td>
-        <td class="ok">да (−1 164)</td>
-        <td>proshina.by</td>
+        <td class="num">481,96</td>
+        <td class="num"><strong>1 928</strong></td>
+        <td class="ok">да (−1 072)</td>
+        <td>склад Onlíner</td>
       </tr>
       <tr>
-        <td><strong>Nexen WinGuard WinSpike 3</strong></td>
-        <td>шипы</td>
-        <td class="num">99T XL</td>
+        <td><strong>Kumho WinterCraft WS71</strong></td>
+        <td>универсальный</td>
+        <td class="num">99V XL</td>
         <td class="num">нет данных</td>
-        <td class="num">528,00</td>
-        <td class="num"><strong>2 112</strong></td>
-        <td class="ok">да (−888)</td>
-        <td>cybermarket.by</td>
+        <td class="num">629,00</td>
+        <td class="num"><strong>2 516</strong></td>
+        <td class="ok">да (−484)</td>
+        <td>под заказ (proshina.by)</td>
+      </tr>
+      <tr>
+        <td><strong>Yokohama BluEarth Winter V906</strong></td>
+        <td>европейский</td>
+        <td class="num">99V</td>
+        <td class="num">нет данных</td>
+        <td class="num">677,00</td>
+        <td class="num"><strong>2 708</strong></td>
+        <td class="ok">да (−292)</td>
+        <td>r13.by (Гродно), доставка</td>
       </tr>
       <tr>
         <td><strong>Yokohama iceGUARD iG60</strong></td>
-        <td>липучка</td>
+        <td>скандинавский</td>
         <td class="num">99Q XL</td>
         <td class="num">C–D / E / 71–73 dB</td>
         <td class="num">715,00</td>
@@ -494,22 +510,12 @@
         <td class="ok">да (−140)</td>
         <td>proshina.by</td>
       </tr>
-      <tr>
-        <td><strong>Pirelli Ice Zero 2</strong></td>
-        <td>шипы</td>
-        <td class="num">99H</td>
-        <td class="num">нет данных</td>
-        <td class="num">738,08</td>
-        <td class="num"><strong>2 952</strong></td>
-        <td class="ok">да (−48)</td>
-        <td>rft.by</td>
-      </tr>
     </tbody>
   </table>
 </div>
-<p class="cap">Цены — за 1 шину при покупке комплекта, с учётом акций магазина, на 24.10.2026. Шиномонтаж R18 в Минске при покупке шин в этих же магазинах — со скидкой 20–50 %, ориентир 60–100 BYN за комплект.</p>
+<p class="cap">Цены за 1 шину при покупке комплекта, с учётом акций магазина, на 24.10.2026. Шиномонтаж R18 в Минске при покупке шин в этих же магазинах — со скидкой 20–50 %, ориентир 60–100 BYN за комплект.</p>
 
-<h2>4. Куда уходит бюджет</h2>
+<h2>5. Куда уходит бюджет</h2>
 <div class="card">
   <div class="bars">
     <div class="bar-row">
@@ -523,14 +529,19 @@
       <div class="bar-val">1 825 BYN</div>
     </div>
     <div class="bar-row">
-      <div class="bar-label">Kumho WinterCraft Ice Wi32</div>
-      <div class="bar-track"><div class="bar-fill" style="width:61.2%"></div></div>
-      <div class="bar-val">1 836 BYN</div>
+      <div class="bar-label">iLink Snowgripper I</div>
+      <div class="bar-track"><div class="bar-fill" style="width:64.3%"></div></div>
+      <div class="bar-val">1 928 BYN</div>
     </div>
     <div class="bar-row">
-      <div class="bar-label">Nexen WinSpike 3</div>
-      <div class="bar-track"><div class="bar-fill" style="width:70.4%"></div></div>
-      <div class="bar-val">2 112 BYN</div>
+      <div class="bar-label">Kumho WS71</div>
+      <div class="bar-track"><div class="bar-fill" style="width:83.9%"></div></div>
+      <div class="bar-val">2 516 BYN</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Yokohama V906</div>
+      <div class="bar-track"><div class="bar-fill" style="width:90.3%"></div></div>
+      <div class="bar-val">2 708 BYN</div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Yokohama iG60</div>
@@ -538,17 +549,12 @@
       <div class="bar-val">2 860 BYN</div>
     </div>
     <div class="bar-row">
-      <div class="bar-label">Pirelli Ice Zero 2</div>
-      <div class="bar-track"><div class="bar-fill" style="width:98.4%"></div></div>
-      <div class="bar-val">2 952 BYN</div>
-    </div>
-    <div class="bar-row">
       <div class="bar-label">Michelin X-Ice Snow <span class="badge b-over">вне бюджета</span></div>
       <div class="bar-track"><div class="bar-fill over" style="width:100%"></div></div>
       <div class="bar-val">3 412 BYN</div>
     </div>
     <div class="bar-row">
-      <div class="bar-label">Continental WinterContact TS 860 S <span class="badge b-over">вне бюджета</span></div>
+      <div class="bar-label">Continental TS 860 S <span class="badge b-over">вне бюджета</span></div>
       <div class="bar-track"><div class="bar-fill over" style="width:100%"></div></div>
       <div class="bar-val">3 653 BYN</div>
     </div>
@@ -556,82 +562,87 @@
   <p class="cap">Длина шкалы = стоимость комплекта из 4 шин. Бюджет 3 000 BYN.</p>
 </div>
 
-<h2>5. Что не влезло в 3 000 BYN (для понимания картины)</h2>
+<h2>6. Что осталось за бюджетом (только липучки)</h2>
 <div class="tablewrap">
   <table>
     <thead>
       <tr><th>Модель</th><th>Тип</th><th>Индексы</th><th>Цена 1 шт.</th><th>Комплект</th><th>Магазин</th></tr>
     </thead>
     <tbody>
-      <tr><td>Toyo Observe S944</td><td>липучка</td><td class="num">95W</td><td class="num">809,00</td><td class="num no">3 236</td><td>proshina.by</td></tr>
-      <tr><td>Michelin X-Ice Snow</td><td>липучка</td><td class="num">99H XL</td><td class="num">853,00</td><td class="num no">3 412</td><td>tyreg.by</td></tr>
-      <tr><td>Continental WinterContact TS 860 S</td><td>липучка</td><td class="num">99V</td><td class="num">913,30</td><td class="num no">3 653</td><td>autoset.by</td></tr>
-      <tr><td>Goodyear UltraGrip Performance 3</td><td>липучка</td><td class="num">95T</td><td class="num">933,00</td><td class="num no">3 732</td><td>proshina.by</td></tr>
-      <tr><td>Bridgestone Blizzak 6</td><td>липучка</td><td class="num">99V</td><td class="num">1 071,00</td><td class="num no">4 284</td><td>proshina.by</td></tr>
-      <tr><td>Continental VikingContact 8</td><td>липучка</td><td class="num">99H</td><td class="num">1 072,00</td><td class="num no">4 288</td><td>proshina.by</td></tr>
-      <tr><td>Goodyear UltraGrip Performance+ <em>run-flat</em></td><td>липучка ROF</td><td class="num">99V</td><td class="num">1 206,00</td><td class="num no">4 824</td><td>proshina.by</td></tr>
-      <tr><td>Michelin X-Ice North 4</td><td>шипы</td><td class="num">99T</td><td class="num">1 298,13</td><td class="num no">5 192</td><td>bagoria.by</td></tr>
+      <tr><td>Michelin X-Ice Snow</td><td>скандинавский</td><td class="num">99H XL</td><td class="num">853,00</td><td class="num no">3 412</td><td>tyreg.by</td></tr>
+      <tr><td>Continental WinterContact TS 860 S</td><td>европейский</td><td class="num">99V</td><td class="num">913,30</td><td class="num no">3 653</td><td>autoset.by</td></tr>
+      <tr><td>Michelin X-Ice Snow+</td><td>скандинавский</td><td class="num">99H</td><td class="num">966,00</td><td class="num no">3 864</td><td>proshina.by</td></tr>
+      <tr><td>Michelin Alpin 7</td><td>европейский</td><td class="num">99V</td><td class="num">969,00</td><td class="num no">3 876</td><td>proshina.by</td></tr>
+      <tr><td>Goodyear UltraGrip Performance 3</td><td>европейский</td><td class="num">99V</td><td class="num">997,00</td><td class="num no">3 988</td><td>proshina.by</td></tr>
+      <tr><td>Bridgestone Blizzak 6</td><td>скандинавский</td><td class="num">99V</td><td class="num">1 071,00</td><td class="num no">4 284</td><td>proshina.by</td></tr>
+      <tr><td>Continental VikingContact 8</td><td>скандинавский</td><td class="num">99H</td><td class="num">1 072,00</td><td class="num no">4 288</td><td>proshina.by</td></tr>
+      <tr><td>Goodyear UltraGrip Performance+ <em>run-flat</em></td><td>европейский ROF</td><td class="num">99V</td><td class="num">1 206,00</td><td class="num no">4 824</td><td>proshina.by</td></tr>
     </tbody>
   </table>
 </div>
-<p class="cap">Вывод: премиальная «липучка» в этом размере стартует примерно с 3 400 BYN за комплект. В бюджет 3 000 попадают либо сильный средний класс без шипов, либо премиум на шипах (Pirelli), либо дешёвые шипы.</p>
+<p class="cap">Вывод: премиальная «липучка» в 225/50 R18 начинается с ≈3 400 BYN за комплект. В бюджет 3 000 попадает сильный средний класс — либо «европеец» с V-индексом, либо «скандинавка».</p>
 
-<h2>6. Рекомендация</h2>
+<h2>7. Рекомендация под xDrive</h2>
 <div class="card">
-  <h3>Сценарий A — Минск, город и трасса, 80–90 % пробега по асфальту и мокрому снегу</h3>
-  <p><strong>Hankook Winter i*cept evo4 W340 — 1 328 BYN за комплект.</strong> Свежая модель с лучшим в подборке торможением на мокром (евроэтикетка B), точной управляемостью для заднеприводного седана и полным соответствием спецификации BMW (99 XL / V). Экономия около 1 670 BYN относительно лимита — хватит и на шиномонтаж, и на балансировку, и на второй комплект щёток.</p>
+  <h3>Основной выбор — Hankook Winter i*cept evo4 W340, 1 328 BYN</h3>
+  <p>На полном приводе вы и так получаете уверенный старт и тягу; слабое место — торможение и устойчивость в повороте, а за них отвечает резина. W340 даёт лучшее в подборке торможение на мокром (класс B), V-индекс, 99 XL и точные реакции — при этом экономит 1 672 BYN, которые можно потратить на шиномонтаж, балансировку и, что важнее для xDrive, на <strong>ротацию и контроль давления</strong> в течение сезона.</p>
 
-  <h3 style="margin-top:22px">Сценарий B — загородные трассы, дворы, лёд, поездки зимой по всей РБ</h3>
-  <p><strong>Pirelli Ice Zero 2 — 2 952 BYN</strong> (если готовы выложить почти весь бюджет) или <strong>Nexen WinGuard WinSpike 3 — 2 112 BYN</strong> как разумный компромисс с запасом 888 BYN. Pirelli даёт максимум на льду и лучший среди шипов индекс скорости, Nexen — «достаточно хорошо» заметно дешевле. Kumho Wi32 (1 836 BYN) — если бюджет важнее и вы готовы уточнять, придут ли шины уже ошипованными.</p>
+  <h3 style="margin-top:22px">Если зимой много снега и льда — Gislaved ArcticControl, 1 825 BYN</h3>
+  <p>«Скандинавка» с мягкой смесью: заметно лучше на укатанном снегу, во дворах и на загородных дорогах. Цена вдвое ниже лимита, товара много, забрать можно в день заказа. Плата — индекс T и отсутствие евроэтикетки, для РБ это не ограничение.</p>
 
-  <h3 style="margin-top:22px">Сценарий C — компромисс «скандинавская липучка + запас денег»</h3>
-  <p><strong>Gislaved ArcticControl — 1 825 BYN.</strong> Мягкая смесь и направленный протектор под укатанный снег и лёд, технологии Continental, товара много на складах — можно забрать комплект сегодня. Минус только один: индекс T и отсутствие евроэтикетки.</p>
+  <h3 style="margin-top:22px">Если хочется максимум «зимы» за деньги — Yokohama iceGUARD iG60, 2 860 BYN</h3>
+  <p>Сильнейший лёд среди липучек в бюджете, самый тихий. Но торможение на мокром у него слабое (E), а это как раз основной зимний сценарий Минска. Остаток бюджета 140 BYN — впритык на монтаж.</p>
 
   <div class="note warn" style="margin-top:20px">
-    <strong>Чего избегать именно в этом бюджете:</strong> дешёвые китайские «зимние» шины за 190–230 BYN/шт (WestLake, Grenlander, Wanli, Sunfull, Rockblade и подобные). Формально они пройдут по ПДД, но в размере 225/50 R18 на 1 690-килограммовом заднеприводном BMW разница в тормозном пути на льду и в устойчивости на мокром — это не «экономия», а риск. Разница с Hankook — около 570 BYN на комплект.
+    <strong>Чего избегать:</strong> дешёвые «зимние» бренды за 190–250 BYN/шт (WestLake Z-507, Grenlander, Firemax, Habilead, Mazzini и подобные). Формально ПДД проходят, но на 1 720 кг полноприводного BMW разница в тормозном пути на льду и в поведении на мокром — это не экономия. Разница с Hankook — около 570 BYN на комплект, то есть меньше стоимости одного шиномонтажа с правкой диска.
+  </div>
+
+  <div class="note bad">
+    <strong>Отдельно про xDrive:</strong> не покупайте 2 шины вместо 4 и не ставьте разные модели на оси — даже если очень хочется сэкономить. Муфта xDrive не прощает разницу в диаметре: 2 мм по диаметру (≈6 мм по окружности) уже означает постоянное проскальзывание фрикционов. Комплект из 4 одинаковых шин — не рекомендация, а условие работы полного привода.
   </div>
 </div>
 
-<h2>7. Практика покупки</h2>
+<h2>8. Практика покупки</h2>
 <div class="card">
   <ol>
-    <li><strong>Проверьте дату производства</strong> (DOT-код, 4 цифры: неделя + год). Берите 2026 год, не старше 2 лет — резина стареет даже на складе.</li>
-    <li><strong>Требуйте 4 шины одной партии</strong> и одинакового рисунка на оси — это требование ПДД, а на заднеприводной машине ещё и вопрос управляемости.</li>
-    <li><strong>Сравните цену на 2–3 магазинах по одной модели.</strong> Разброс реальный: Gislaved ArcticControl — 456 / 735 / 793 BYN за одну и ту же шину; Nexen WinSpike 3 — 528 / 578 / 633 BYN.</li>
-    <li><strong>Доставка:</strong> по Минску комплект из 4 шин обычно бесплатно; по РБ — 25–50 BYN. Шиномонтаж при покупке в магазине — со скидкой.</li>
-    <li><strong>Уточняйте наличие шипов</strong>, если берёте «под ошиповку» (Kumho Wi32, Nexen WinSpike 3): часть поставок идёт с отверстиями без шипов.</li>
-    <li><strong>Ставьте зимние шины до 1 декабря</strong> — по ПДД РБ это обязательный срок, а по факту первый гололёд в Минске случается раньше.</li>
+    <li><strong>Проверьте дату производства</strong> (DOT-код: 4 цифры — неделя и год). Берите 2026 год, не старше 2 лет.</li>
+    <li><strong>Требуйте 4 шины одной партии</strong> — на xDrive это критично и по ПДД (одинаковый рисунок на оси), и по механике.</li>
+    <li><strong>Сравните 2–3 магазина по одной модели.</strong> Разброс реальный: Gislaved ArcticControl — 456 / 511 / 793 BYN за одну шину.</li>
+    <li><strong>Доставка:</strong> по Минску комплект обычно бесплатно; по РБ — 25–50 BYN. Шиномонтаж при покупке в магазине — со скидкой.</li>
+    <li><strong>Ставьте зимние шины до 1 декабря</strong> — это срок из ПДД, а первый гололёд в Минске случается раньше.</li>
+    <li><strong>После установки:</strong> проверьте давление по табличке на стойке водительской двери (у F34 xDrive оно одинаковое по осям, обычно 2,3–2,5 бар при частичной загрузке) и сделайте развал-схождение, если меняли что-то в подвеске.</li>
+    <li><strong>Первые 200–300 км</strong> — обкатка: без резких торможений, чтобы снять технологический слой с протектора.</li>
   </ol>
 </div>
 
-<h2>8. Методика и оговорки</h2>
+<h2>9. Методика и оговорки</h2>
 <div class="card">
   <ul>
-    <li>Отобраны только предложения, где в наличии <strong>именно 225/50 R18</strong> с индексом нагрузки 99 (XL) — то, что требует BMW для F34.</li>
-    <li>Цены проверены в карточках товара 24.10.2026 и могут меняться ежедневно; часть магазинов даёт цену «при покупке комплекта 4 шт.», за 2 шт. бывает дороже.</li>
-    <li>Показатель «евроэтикетка» есть только у моделей для рынка ЕС; у «скандинавских» и шипованных шин его обычно нет — это не значит, что шина плохая, просто сравнивать нечем.</li>
-    <li>Отзывы и рейтинги магазинов в отчёт не включены: проверялись только характеристики, цена и наличие.</li>
-    <li>Комплект шин не проверялся на балансировку/биение — это делается на шиномонтаже при установке.</li>
+    <li>Отбор: только <strong>225/50 R18, индекс нагрузки 99 (XL), без шипов</strong> — по требованию владельца шипованные варианты исключены полностью, включая Pirelli Ice Zero 2, Kumho Wi32, Nexen WinSpike 3, Michelin X-Ice North 4.</li>
+    <li>Цены проверены в карточках товара 24.10.2026. Часть магазинов даёт цену «при покупке комплекта 4 шт.» — за 2 шт. дороже; наличие меняется ежедневно.</li>
+    <li>Евроэтикетка есть только у моделей для рынка ЕС; у «скандинавских» и бюджетных шин её обычно нет — это не значит, что шина плохая, просто сравнивать нечем.</li>
+    <li>Независимых тестов именно в размере 225/50 R18 не существует; выводы по типу протектора и классу модели, а не по замерам.</li>
+    <li>Barum Polaris 6 и Falken Eurowinter HS02 Pro в этом размере в белорусской рознице на момент проверки не найдены — в подборку не включены.</li>
   </ul>
 </div>
 
-<h2>9. Источники</h2>
+<h2>10. Источники</h2>
 <div class="card">
   <ul class="src">
-    <li>BMW, официальный перечень зимних шин для 3-й серии (F34): <a href="https://myair-bdr.bmwgroup.com/static/manual/RadReif/downloads/Rad-Reifen/Reifenuebersicht/f34wi.pdf" target="_blank" rel="noopener">f34wi.pdf</a> — 225/50 R 18 99V M+S extra load</li>
+    <li>BMW, перечень зимних шин для 3-й серии (F34): <a href="https://myair-bdr.bmwgroup.com/static/manual/RadReif/downloads/Rad-Reifen/Reifenuebersicht/f34wi.pdf" target="_blank" rel="noopener">f34wi.pdf</a> — 225/50 R 18 99V M+S extra load</li>
     <li>ПДД РБ, глава 5 «Колёса и шины»: <a href="https://adrive.by/(X(1)S(0h5atkqyoaj05212srm4gzyq))/pdd/by?chap=ap4_ch5" target="_blank" rel="noopener">adrive.by</a> · разъяснение ГАИ: <a href="https://belta.by/society/view/kakie-shiny-schitajutsja-zimnimi-po-novym-pdd-rasskazali-v-gai-744096-2025/" target="_blank" rel="noopener">belta.by</a></li>
     <li>Hankook W340: <a href="https://www.colesa.by/content/winter-icept-evo-4-w340/225-50-r18" target="_blank" rel="noopener">colesa.by</a> · <a href="https://autoset.by/tires/hankook/winter_icept_evo_4_w340/225_50_18_99_V_195810/" target="_blank" rel="noopener">autoset.by</a></li>
     <li>Gislaved ArcticControl: <a href="https://tyreg.by/catalog/tires/gislaved/arcticcontrol/" target="_blank" rel="noopener">tyreg.by</a> · <a href="https://autoset.by/tires/gislaved/arcticcontrol/225_50_18_99_T_184886/" target="_blank" rel="noopener">autoset.by</a> · <a href="https://rft.by/catalog/tires/gislaved/arcticcontrol_3275/102622/" target="_blank" rel="noopener">rft.by</a></li>
-    <li>Kumho WinterCraft Ice Wi32: <a href="https://proshina.by/catalog/tires/kumho-wintercraft-ice-wi32-225-50r18-99t.html" target="_blank" rel="noopener">proshina.by</a> · <a href="https://loyal.by/catalog/shiny/kumho/kumho-wintercraft-wi32-225-50-r18-99t-xl/" target="_blank" rel="noopener">loyal.by</a></li>
-    <li>Nexen WinGuard WinSpike 3: <a href="https://www.cybermarket.by/tires/nexen/newi22550r1899ts" target="_blank" rel="noopener">cybermarket.by</a> · <a href="https://prodetal.by/avtomobilnie-shiny/nexen/nexen-winguard-winspike-3-225-50r18-99t-shipy/" target="_blank" rel="noopener">prodetal.by</a></li>
-    <li>Yokohama iceGUARD iG60: <a href="https://proshina.by/catalog/tires/yokohama-iceguard-ig60-225-50r18-99q.html" target="_blank" rel="noopener">proshina.by</a> · характеристики серии: <a href="https://www.yokohama.eu/tyres/iceguard-studless-ig60/" target="_blank" rel="noopener">yokohama.eu</a></li>
-    <li>Pirelli Ice Zero 2: <a href="https://rft.by/catalog/tires/pirelli/ice-zero-2/?display=table&order=asc&sort=SHOWS" target="_blank" rel="noopener">rft.by</a> · <a href="https://proshina.by/catalog/tires/pirelli/ice-zero-2/" target="_blank" rel="noopener">proshina.by</a></li>
-    <li>Каталоги для сверки цен по всем зимним 225/50 R18: <a href="https://proshina.by/catalog/tires/r18/zima/225-50-r18/" target="_blank" rel="noopener">proshina.by</a> · <a href="https://tyreg.by/catalog/tires/225-50-r18/" target="_blank" rel="noopener">tyreg.by</a> · <a href="https://megasklad24.by/point/225-50-r18" target="_blank" rel="noopener">megasklad24.by</a> · <a href="https://shinatut.by/catalog-tyres/r18/225-50-r18/" target="_blank" rel="noopener">shinatut.by</a></li>
+    <li>Kumho WinterCraft WS71: <a href="https://proshina.by/catalog/tires/kumho-wintercraft-ws71-225-50r18-99v.html" target="_blank" rel="noopener">proshina.by</a> · <a href="https://rft.by/catalog/tires/kumho/wintercraft_ws71_3322/80948/" target="_blank" rel="noopener">rft.by</a></li>
+    <li>Yokohama BluEarth Winter V906: <a href="https://r13.by/shop/shini/7BFAC3EB-CD10-3FA0-BE31-183C103A9FC9/shiny-yokohama-bluearth-winter-v906-22550-r18-99v-tl/" target="_blank" rel="noopener">r13.by</a></li>
+    <li>Yokohama iceGUARD iG60: <a href="https://proshina.by/catalog/tires/yokohama-iceguard-ig60-225-50r18-99q.html" target="_blank" rel="noopener">proshina.by</a> · евроэтикетка серии: <a href="https://www.yokohama.eu/tyres/iceguard-studless-ig60/" target="_blank" rel="noopener">yokohama.eu</a></li>
+    <li>iLink Snowgripper I и общий каталог 225/50 R18: <a href="https://catalog.onliner.by/tires?siny-22550-r18=" target="_blank" rel="noopener">catalog.onliner.by</a></li>
+    <li>Каталоги для сверки цен: <a href="https://proshina.by/catalog/tires/r18/zima/225-50-r18/" target="_blank" rel="noopener">proshina.by</a> · <a href="https://tyreg.by/catalog/tires/225-50-r18/" target="_blank" rel="noopener">tyreg.by</a> · <a href="https://megasklad24.by/point/225-50-r18" target="_blank" rel="noopener">megasklad24.by</a> · <a href="https://shinatut.by/catalog-tyres/r18/225-50-r18/" target="_blank" rel="noopener">shinatut.by</a></li>
   </ul>
 </div>
 
 <footer>
-  Отчёт подготовлен 24.10.2026 · BMW 328i GT (F34, 2015) · 225/50 R18 · бюджет 3 000 BYN за комплект · цены и наличие проверены в интернет-магазинах Беларуси и требуют подтверждения при заказе.
+  Обновлено 24.10.2026 · BMW 328i xDrive GT (F34, 2015) · 225/50 R18 99 XL · только фрикционные шины · бюджет 3 000 BYN за комплект · цены и наличие требуют подтверждения при заказе.
 </footer>
 
 </div>
