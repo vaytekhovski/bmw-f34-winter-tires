@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hankook W340 vs лучшая зимняя шина — BMW 328i xDrive GT (F34) · 225/50 R18</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --ink:#141a22; --muted:#5d6b7c; --line:#e2e6ec;
+    --accent:#0b5fff; --good:#0f7a4a; --warn:#b26a00; --bad:#b3261e;
+    --nordic:#0f766e; --euro:#7c3aed; --awd:#0b5fff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:32px 20px 72px; background:var(--bg); color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto}
+  h1{font-size:30px;line-height:1.15;margin:0 0 8px;letter-spacing:-.4px}
+  h2{font-size:21px;margin:44px 0 14px;letter-spacing:-.2px}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 12px}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(11,95,255,.28)}
+  a:hover{border-bottom-color:var(--accent)}
+  .sub{color:var(--muted);font-size:15px;margin:0 0 22px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:0 0 8px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .kpi b{display:block;font-size:20px;letter-spacing:-.3px}
+  .kpi span{color:var(--muted);font-size:13px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .card + .card{margin-top:14px}
+  .note{border-left:4px solid var(--accent);background:#eef3ff;border-radius:0 12px 12px 0;padding:14px 18px;margin:16px 0}
+  .note.warn{border-left-color:var(--warn);background:#fff6e6}
+  .note.bad{border-left-color:var(--bad);background:#fdeceb}
+  ul,ol{margin:0 0 12px;padding-left:22px}
+  li{margin:5px 0}
+  code{background:#eef1f5;border-radius:5px;padding:1px 6px;font-size:14px}
+  .badge{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px;letter-spacing:.2px}
+  .b-nordic{background:#e3f5f1;color:var(--nordic)}
+  .b-euro{background:#f1eaff;color:var(--euro)}
+  .b-xl{background:#eef2f7;color:#334155}
+  .b-awd{background:#e6edff;color:var(--awd)}
+  .b-over{background:#fdeceb;color:var(--bad)}
+
+  .opts{display:grid;gap:16px}
+  .opt{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+  .opt.top{border-color:#bfd2ff;box-shadow:0 2px 18px rgba(11,95,255,.10)}
+  .opt-head{display:flex;gap:14px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;margin-bottom:10px}
+  .rank{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:#101827;color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px}
+  .opt-main{flex:1 1 320px;min-width:240px}
+  .model{font-size:19px;font-weight:700;letter-spacing:-.2px}
+  .model small{font-weight:500;color:var(--muted);font-size:14px;display:block;margin-top:2px}
+  .price{text-align:right;flex:0 0 auto}
+  .price b{font-size:25px;letter-spacing:-.5px;display:block;line-height:1.1}
+  .price span{font-size:13px;color:var(--muted);display:block}
+  .price .set{font-size:14px;color:var(--ink);font-weight:600;margin-top:4px}
+  .specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0 12px}
+  .spec{background:#f8f9fb;border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+  .spec i{display:block;font-style:normal;font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
+  .spec b{font-size:14.5px;font-weight:600}
+  .pm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 14px}
+  .pm h4{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
+  .pm ul{padding-left:18px;margin:0;font-size:14.5px}
+  .pm li{margin:3px 0}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .links a{
+    font-size:13.5px;font-weight:600;background:#f2f5fa;border:1px solid var(--line);
+    border-radius:8px;padding:6px 11px
+  }
+  .links a:hover{background:#eaf0fb;border-color:#bfd2ff}
+
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:880px}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:#f3f5f9;font-size:12.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:700;white-space:nowrap}
+  tbody tr:hover{background:#fafbfd}
+  tbody tr:last-child td{border-bottom:none}
+  td.num{white-space:nowrap;font-variant-numeric:tabular-nums}
+  .ok{color:var(--good);font-weight:600}
+  .no{color:var(--bad);font-weight:600}
+
+  .bars{margin-top:6px}
+  .bar-row{display:grid;grid-template-columns:230px 1fr 92px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line)}
+  .bar-row:last-child{border-bottom:none}
+  .bar-label{font-size:14px;font-weight:600}
+  .bar-track{background:#eef1f5;border-radius:6px;height:16px;position:relative;overflow:hidden}
+  .bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#0b5fff,#5b8dff)}
+  .bar-fill.over{background:linear-gradient(90deg,#b3261e,#e0574d)}
+  .bar-val{font-size:13.5px;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .cap{font-size:13px;color:var(--muted);margin-top:8px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+  .src{font-size:13.5px;color:var(--muted)}
+  .src li{margin:4px 0}
+  @media (max-width:640px){
+    .pm,.grid2{grid-template-columns:1fr}
+    .bar-row{grid-template-columns:1fr;gap:4px}
+    .bar-val{text-align:left}
+    body{padding:20px 12px 56px}
+    h1{font-size:24px}
+  }
+  @media print{
+    body{background:#fff;padding:0}
+    .opt,.kpi,.card,.tablewrap{box-shadow:none}
+    a{color:#000;border-bottom:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Hankook W340 против «лучшей шины» для вашего авто</h1>
+  <p class="sub">BMW 328i xDrive GT (F34) · 225/50 R18 99V XL · только фрикционные · цены и наличие проверены 24.10.2026 · <a href="./">основной отчёт по подбору</a></p>
+  <div class="kpis">
+    <div class="kpi"><b>W340</b><span>от 340 BYN/шт · 4 шт. в наличии — 2 396 BYN</span></div>
+    <div class="kpi"><b>Лучшая в классе</b><span>Continental TS 870 P · 1 134 BYN/шт</span></div>
+    <div class="kpi"><b>Лучшая из наличия</b><span>Continental TS 860 S · 908 BYN/шт</span></div>
+    <div class="kpi"><b>Разница</b><span>комплект: 2 396 → 4 536 BYN (×1,9)</span></div>
+  </div>
+</header>
+
+<h2>1. Короткий ответ</h2>
+<div class="opts">
+
+  <article class="opt top">
+    <div class="opt-head">
+      <div class="rank">1</div>
+      <div class="opt-main">
+        <div class="model">Лучшая по совокупности — Continental WinterContact TS 870 P <span class="badge b-euro">европейский</span> <span class="badge b-xl">99V</span>
+          <small>225/50 R18 99V · премиум-фрикцион, эталон управляемости и торможения на мокром асфальте</small>
+        </div>
+      </div>
+      <div class="price">
+        <b>1 134 BYN</b><span>за 1 шт. (proshina.by)</span>
+        <div class="set">4 536 BYN за 4 шт.</div>
+      </div>
+    </div>
+    <div class="specs">
+      <div class="spec"><i>Тип</i><b>Европейская липучка</b></div>
+      <div class="spec"><i>Срок поставки</i><b>8–45 дней (под заказ)</b></div>
+      <div class="spec"><i>Кому</i><b>Минск, МКАД, трасса</b></div>
+      <div class="spec"><i>Дороже W340</i><b class="no">+3 142 BYN</b></div>
+    </div>
+    <div class="pm">
+      <div>
+        <h4>Почему она</h4>
+        <ul>
+          <li>Лучший баланс «мокрый асфальт + снег» в премиум-классе: то, что вы получаете 80 % зимы в РБ.</li>
+          <li>Состав Grip Tech и направленный V-протектор — стабильность на слякоти и в колее.</li>
+          <li>Предсказуемая на пределе: важнее для 245 л.с. и полного привода, чем максимальная тяга.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Минусы</h4>
+        <ul>
+          <li>Под заказ: ждать до полутора месяцев, к сезону можно не успеть.</li>
+          <li>Цена комплекта выходит за прежний бюджет 3 000 BYN в 1,5 раза.</li>
+          <li>Жёстче «скандинавок» на льду — это не шина для дворов и накатанного наста.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a href="https://proshina.by/catalog/tires/continental-wintercontact-ts-870-p-225-50r18-99v.html">proshina.by — карточка</a>
+      <a href="https://proshina.by/catalog/tires/r18/continental/225-50-r18/">proshina.by — все Continental 225/50 R18</a>
+      <a href="https://tyreg.by/catalog/tires/continental/wintercontact-ts-870-p/">tyreg.by — модель</a>
+    </div>
+  </article>
+
+  <article class="opt top">
+    <div class="opt-head">
+      <div class="rank">2</div>
+      <div class="opt-main">
+        <div class="model">Лучшая, которую можно поставить сейчас — Continental WinterContact TS 860 S <span class="badge b-euro">европейский</span> <span class="badge b-xl">99V</span>
+          <small>225/50 R18 99V · спортивная версия линейки WinterContact, в наличии 1–2 дня</small>
+        </div>
+      </div>
+      <div class="price">
+        <b>908 BYN</b><span>за 1 шт. (proshina.by)</span>
+        <div class="set">3 632 BYN за 4 шт.</div>
+      </div>
+    </div>
+    <div class="specs">
+      <div class="spec"><i>Тип</i><b>Европейская липучка</b></div>
+      <div class="spec"><i>Срок поставки</i><b>1–2 дня</b></div>
+      <div class="spec"><i>Кому</i><b>Активная езда, трасса</b></div>
+      <div class="spec"><i>Дороже W340</i><b class="no">+1 236 BYN</b></div>
+    </div>
+    <div class="pm">
+      <div>
+        <h4>Почему она</h4>
+        <ul>
+          <li>Тот же премиум-уровень, но без ожидания: забрать на этой неделе.</li>
+          <li>Спортивный профиль линейки «S» — рассчитана на тяжёлые быстрые седаны, ровно ваш случай.</li>
+          <li>Дешевле TS 870 P на 226 BYN за шину.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Минусы</h4>
+        <ul>
+          <li>Поколение старше: на мокром чуть уступает TS 870 P и Alpin 7.</li>
+          <li>Комплект 3 632 BYN — тоже вне бюджета 3 000.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a href="https://proshina.by/catalog/tires/continental-wintercontact-ts-860-s-225-50r18-99v.html">proshina.by — карточка</a>
+      <a href="https://proshina.by/catalog/tires/r18/continental/225-50-r18/">proshina.by — каталог</a>
+    </div>
+  </article>
+
+  <article class="opt top">
+    <div class="opt-head">
+      <div class="rank">3</div>
+      <div class="opt-main">
+        <div class="model">Лучшая по деньгам — Hankook Winter i*cept evo4 W340 <span class="badge b-euro">европейский</span> <span class="badge b-xl">99V XL</span>
+          <small>225/50 R18 99V XL · фрикционная UHP 2026 года, замена W330</small>
+        </div>
+      </div>
+      <div class="price">
+        <b>599 BYN</b><span>за 1 шт. в комплекте (bamper.by)</span>
+        <div class="set">2 396 BYN за 4 шт.</div>
+      </div>
+    </div>
+    <div class="specs">
+      <div class="spec"><i>Тип</i><b>Европейская липучка</b></div>
+      <div class="spec"><i>Евроэтикетка</i><b>C / B / 72 dB</b></div>
+      <div class="spec"><i>Наличие</i><b class="ok">4 шт. сейчас (bamper)</b></div>
+      <div class="spec"><i>Дешевле TS 870 P</i><b class="ok">−3 142 BYN</b></div>
+    </div>
+    <div class="pm">
+      <div>
+        <h4>За что её брать</h4>
+        <ul>
+          <li>Единственный вариант с подтверждёнными <strong>4 шт. одной модели в одном лоте</strong> — для xDrive это критично.</li>
+          <li>Евроэтикетка «C / B» на мокром — уровень выше среднего; проигрыш премиуму не катастрофический.</li>
+          <li>Модель 2026 года: производитель заявляет +8 % управляемости на снегу и +15 % ресурса против W330.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Где проигрывает</h4>
+        <ul>
+          <li>Шум 72 dB против 71 dB у Michelin Alpin 7 — разница слышна на трассе.</li>
+          <li>Класс «средний премиум»: на льду и на пределе уступает Continental/Michelin.</li>
+          <li>Дешёвые предложения (340–348 BYN) — с нулевым остатком или без подтверждения количества.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a href="https://bamper.by/shiny/detail_span_hankook_winter_i_cept_evo_4_w340_225_50_r18_span_4_sht_zimnie_legkovye_novye-104809_151336/">bamper.by — 4 шт., 2 396 BYN</a>
+      <a href="https://www.rft.by/catalog/tires/hankook/winter_i_cept_evo_4_w340_3314/107793/">rft.by — 348,42 BYN</a>
+      <a href="https://www.colesa.by/content/winter-icept-evo-4-w340/225-50-r18">colesa.by — 340 BYN</a>
+      <a href="https://autoset.by/tires/hankook/winter_icept_evo_4_w340/225_50_18_99_V_195810/">autoset.by — 384,34 BYN</a>
+      <a href="https://proshina.by/catalog/tires/hankook-winter-i-cept-evo-4-w340-225-50r18-99v.html">proshina.by — 610 BYN</a>
+    </div>
+  </article>
+
+</div>
+
+<div class="note">
+  <strong>Одной строкой:</strong> если ограничение 3 000 BYN и нужны 4 шины на этой неделе — берите <strong>W340 на bamper.by (2 396 BYN за комплект новых)</strong>. Если бюджет можно растянуть и важен максимум на мокром и на пределе — <strong>Continental WinterContact TS 870 P</strong> (4 536 BYN, ждать), а если нужно «премиум и сразу» — <strong>TS 860 S</strong> (3 632 BYN, 1–2 дня).
+</div>
+
+<h2>2. Сравнительная таблица</h2>
+<p class="sub" style="margin-bottom:14px">Все — нешипованные, 18 дюймов, индекс нагрузки не ниже 99 (775 кг). Цена за 1 шт. и комплект — по самой дешёвой найденной цене в РБ на 24.10.2026, без шиномонтажа.</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr>
+      <th>Модель</th>
+      <th>Тип</th>
+      <th>Индексы</th>
+      <th>Евроэтикетка<br>качение / мокро / шум</th>
+      <th>Цена 1 шт.</th>
+      <th>Комплект 4 шт.</th>
+      <th>Наличие в РБ</th>
+      <th>Главное отличие</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Continental WinterContact TS 870 P</strong></td>
+      <td>европейский</td>
+      <td>99V</td>
+      <td>— не публикуется для этого размера</td>
+      <td class="num">1 134</td>
+      <td class="num">4 536</td>
+      <td class="no">под заказ 8–45 дней</td>
+      <td>Эталон мокрого асфальта и управляемости</td>
+    </tr>
+    <tr>
+      <td><strong>Continental WinterContact TS 860 S</strong></td>
+      <td>европейский</td>
+      <td>99V</td>
+      <td>— не публикуется</td>
+      <td class="num">908</td>
+      <td class="num">3 632</td>
+      <td class="ok">1–2 дня</td>
+      <td>Премиум из наличия, спортивный профиль</td>
+    </tr>
+    <tr>
+      <td><strong>Michelin Alpin 7</strong></td>
+      <td>европейский</td>
+      <td>99V XL</td>
+      <td>C / B / 71 dB</td>
+      <td class="num">1 017</td>
+      <td class="num">4 070</td>
+      <td class="ok">1–2 дня</td>
+      <td>Самый тихий и комфортный в подборке</td>
+    </tr>
+    <tr>
+      <td><strong>Hankook Winter i*cept evo4 W340</strong></td>
+      <td>европейский</td>
+      <td>99V XL</td>
+      <td>C / B / 72 dB</td>
+      <td class="num">599</td>
+      <td class="num">2 396</td>
+      <td class="ok">4 шт. в наличии (bamper)</td>
+      <td>Лучшая цена при живом наличии комплекта</td>
+    </tr>
+    <tr>
+      <td><strong>Bridgestone Blizzak 6</strong></td>
+      <td>европейский</td>
+      <td>99V</td>
+      <td>— не публикуется</td>
+      <td class="num">1 071</td>
+      <td class="num">4 284</td>
+      <td class="no">под заказ 8–45 дней</td>
+      <td>Крепкая боковина, ровный износ</td>
+    </tr>
+    <tr>
+      <td><strong>Continental VikingContact 8</strong></td>
+      <td>скандинавский</td>
+      <td>99H</td>
+      <td>— не публикуется</td>
+      <td class="num">1 093</td>
+      <td class="num">4 372</td>
+      <td class="no">под заказ 8–45 дней</td>
+      <td>Мягкая, лучшая на льду и насте</td>
+    </tr>
+    <tr>
+      <td><strong>Goodyear UltraGrip Performance+</strong> (run-flat)</td>
+      <td>европейский</td>
+      <td>99V RF</td>
+      <td>— не публикуется</td>
+      <td class="num">1 206</td>
+      <td class="num">4 824</td>
+      <td class="no">под заказ 8–45 дней</td>
+      <td>Только если нужен run-flat (нет докатки)</td>
+    </tr>
+    <tr>
+      <td><strong>Yokohama BluEarth Winter V906</strong></td>
+      <td>европейский</td>
+      <td>99V</td>
+      <td>— не публикуется</td>
+      <td class="num">730</td>
+      <td class="num">2 920</td>
+      <td class="ok">1–2 дня</td>
+      <td>Средний класс: компромисс цена/качество</td>
+    </tr>
+    <tr>
+      <td><strong>Gislaved ArcticControl</strong></td>
+      <td>скандинавский</td>
+      <td>99T XL</td>
+      <td>— не публикуется</td>
+      <td class="num">456</td>
+      <td class="num">1 825</td>
+      <td class="ok">есть в наличии</td>
+      <td>Дёшево и цепко на снегу, слабее на асфальте</td>
+    </tr>
+    <tr>
+      <td><strong>Michelin Pilot Alpin 5</strong></td>
+      <td>европейский</td>
+      <td>99V</td>
+      <td>— не публикуется</td>
+      <td class="num">нет цены</td>
+      <td class="num">—</td>
+      <td class="no">в этом размере в РБ нет</td>
+      <td>Формально «лучшая», фактически недоступна</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="cap">Строки «— не публикуется» означают, что магазины РБ не указывают евроэтикетку для этого типоразмера. Никаких тестовых цифр (метры торможения, баллы) в таблице нет: в РБ такие данные не публикуются, а переносить результаты чужих тестов на другой размер — самообман.</p>
+
+<h2>3. Разница в деньгах наглядно</h2>
+<div class="card">
+  <div class="bars">
+    <div class="bar-row"><div class="bar-label">W340 на rft.by*</div><div class="bar-track"><div class="bar-fill" style="width:27.9%"></div></div><div class="bar-val">1 394 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">Gislaved ArcticControl</div><div class="bar-track"><div class="bar-fill" style="width:36.5%"></div></div><div class="bar-val">1 825 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">W340, 4 шт. в наличии</div><div class="bar-track"><div class="bar-fill" style="width:47.9%"></div></div><div class="bar-val">2 396 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">Yokohama V906</div><div class="bar-track"><div class="bar-fill" style="width:58.4%"></div></div><div class="bar-val">2 920 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">Continental TS 860 S</div><div class="bar-track"><div class="bar-fill" style="width:72.6%"></div></div><div class="bar-val">3 632 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">Michelin Alpin 7</div><div class="bar-track"><div class="bar-fill" style="width:81.4%"></div></div><div class="bar-val">4 070 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">Bridgestone Blizzak 6</div><div class="bar-track"><div class="bar-fill" style="width:85.7%"></div></div><div class="bar-val">4 284 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">Continental VikingContact 8</div><div class="bar-track"><div class="bar-fill" style="width:87.4%"></div></div><div class="bar-val">4 372 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">Continental TS 870 P</div><div class="bar-track"><div class="bar-fill" style="width:90.7%"></div></div><div class="bar-val">4 536 BYN</div></div>
+    <div class="bar-row"><div class="bar-label">Goodyear UG Performance+ RF</div><div class="bar-track"><div class="bar-fill" style="width:96.5%"></div></div><div class="bar-val">4 824 BYN</div></div>
+  </div>
+  <p class="cap">Комплект 4 шины, без шиномонтажа. Шкала — 5 000 BYN. *На rft.by карточка доступна к покупке, но количество на складе не показывается — цену 348,42 BYN считать ориентиром, а не гарантией.</p>
+</div>
+
+<h2>4. Где W340 реально проигрывает, а где нет</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Проигрывает</h3>
+    <ul style="margin-bottom:0">
+      <li><strong>Лёд и укатанный наст.</strong> Европейская липучка любого бренда здесь слабее «скандинавки»: если ваш маршрут — дворы, дачи, неубранные дороги, честнее взять VikingContact 8 или Gislaved ArcticControl.</li>
+      <li><strong>Шум и комфорт.</strong> 72 dB против 71 dB у Alpin 7 и у TS 870 P — на 110 км/ч разница ощутима, а с хорошей шумоизоляцией F34 слышна ещё отчётливее.</li>
+      <li><strong>Ресурс и поведение на пределе.</strong> Премиум-модели держат характеристики дольше к концу срока службы: на третьей зиме разница в сцеплении обычно больше, чем на первой.</li>
+      <li><strong>Цена «здесь и сейчас» против честной.</strong> Дешёвые 340–348 BYN — это либо нулевой остаток, либо неподтверждённое количество. Реально купить комплект можно за 599 BYN/шт.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Не проигрывает</h3>
+    <ul style="margin-bottom:0">
+      <li><strong>Мокрый асфальт.</strong> Евроэтикетка «B» по мокрому торможению — тот же класс, что у премиума. Для минской зимы с реагентами и слякотью это главный показатель.</li>
+      <li><strong>Снег и управляемость.</strong> Направленный V-протектор, модель 2026 года; по заявлению производителя управляемость на снегу лучше W330 на 8 %.</li>
+      <li><strong>Размер и допуски.</strong> Полное соответствие BMW: 225/50 R18, 99 XL (775 кг), V (240 км/ч), M+S, 3PMSF.</li>
+      <li><strong>Цена комплекта.</strong> 2 396 против 4 536 BYN — разница 2 140 BYN, это шиномонтаж на 3–4 сезона плюс второй комплект колёс на дисках.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>5. Что брать под ваш сценарий</h2>
+<div class="card">
+  <ul style="margin-bottom:0">
+    <li><strong>Бюджет 3 000 BYN жёсткий, ездить надо сейчас.</strong> Hankook W340: комплект новых 4 шт. на bamper.by — <strong>2 396 BYN</strong>, гарантия 24 месяца, доставка по Минску за комплект бесплатно, самовывоз пр-т Независимости 199К2, +375 29 126-68-22. Перед выездом уточнить, что шины 2026 года выпуска и одной партии.</li>
+    <li><strong>Бюджет можно растянуть до ~3 700, нужен премиум на этой неделе.</strong> Continental WinterContact TS 860 S — <strong>3 632 BYN</strong>, поставка 1–2 дня (proshina.by, Могилевская 28, +375 29 660-42-70).</li>
+    <li><strong>Нужен максимум на мокром и на пределе, время терпит.</strong> Continental WinterContact TS 870 P — <strong>4 536 BYN</strong>, но 8–45 дней: к декабрю можно не успеть, заказывать сразу.</li>
+    <li><strong>Много льда, дворов, дачи.</strong> Тогда европейская липучка вообще не оптимальна: Continental VikingContact 8 (4 372 BYN, 99H) или дешёвый вход — Gislaved ArcticControl (1 825 BYN).</li>
+    <li><strong>Чего не делать на xDrive:</strong> не смешивать модели и не ставить пару новых шин вместо четырёх — разница диаметра даже 2 мм перегружает муфту полного привода.</li>
+  </ul>
+</div>
+
+<div class="note warn">
+  <strong>Проверить перед оплатой:</strong> дата выпуска (DOT) — не старше 2024 года, все четыре шины одной модели и партии, индекс 99 XL, маркировка M+S и 3PMSF на боковине. Наличие на сайтах в РБ меняется за часы: цифры здесь — снимок на 24.10.2026, подтверждайте звонком.
+</div>
+
+<footer>
+  <p style="margin-bottom:6px">Данные: bamper.by, rft.by, colesa.by, autoset.by, proshina.by, tyreg.by, shop.by, 21vek.by, onliner.by — проверка 24.10.2026. Основной отчёт по подбору зимних шин: <a href="./">Зимние шины 225/50 R18 — BMW 328i xDrive GT (F34)</a>.</p>
+  <p style="margin-bottom:0">Отчёт носит справочный характер; итоговую цену, наличие и комплектацию подтверждает продавец.</p>
+</footer>
+
+</div>
+</body>
+</html>
